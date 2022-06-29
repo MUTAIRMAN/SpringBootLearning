@@ -1,10 +1,10 @@
 package com.example.springbootbackend.service;
 
-import com.example.springbootbackend.entity.EmployeeDemograph;
+import com.example.springbootbackend.entity.EmployeeDemography;
 
 public interface EmployeeDemoGraph {
-    EmployeeDemograph saveEmployeeDemoGraph(EmployeeDemograph employeeDemograph);
+    EmployeeDemography saveEmployeeDemoGraph(EmployeeDemography employeeDemography);
 
-    EmployeeDemograph getEmployeeDemoGraph(long id);
+    EmployeeDemography getEmployeeDemoGraph(long id);
 
 }

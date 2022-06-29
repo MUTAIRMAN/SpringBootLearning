@@ -10,6 +10,7 @@ import javax.persistence.*;
 public class Employee {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="employee_id")
     private long id;
 
     @Column(name="first_name",nullable = false)
@@ -21,8 +22,9 @@ public class Employee {
     @Column(name="email_id")
     private String emailId;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "emp_id", nullable = false)
-    private EmployeeDemograph employeeDemograph;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="emp_demo_id",referencedColumnName = "emp_demo_id")
+    private EmployeeDemography employeeDemography;
 
 }

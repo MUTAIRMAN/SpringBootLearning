@@ -1,13 +1,10 @@
 package com.example.springbootbackend.service.impl;
 
 import com.example.springbootbackend.entity.Employee;
-import com.example.springbootbackend.entity.EmployeeDemograph;
-import com.example.springbootbackend.repository.EmployeeDemoGraphRepository;
 import com.example.springbootbackend.repository.EmployeeRepository;
 import com.example.springbootbackend.service.EmployeeService;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

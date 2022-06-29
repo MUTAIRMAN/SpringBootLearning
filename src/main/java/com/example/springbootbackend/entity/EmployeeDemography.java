@@ -2,16 +2,17 @@ package com.example.springbootbackend.entity;
 
 
 import lombok.Data;
-import org.hibernate.annotations.GeneratorType;
 
 import javax.persistence.*;
 
 @Data
 @Entity
-public class EmployeeDemograph {
+@Table(name="EmployeeDemography")
+public class EmployeeDemography {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name="emp_demo_id")
     private long eid;
 
     @Column(name="city")
@@ -20,8 +21,7 @@ public class EmployeeDemograph {
     @Column(name="state")
     private String state;
 
-    @OneToOne(fetch = FetchType.LAZY,
-    cascade =  CascadeType.ALL,
-    mappedBy = "EmployeeDemograph")
-    private Employee eid_demoId;
+    @OneToOne(mappedBy = "employeeDemography")
+    private Employee employee;
+
 }

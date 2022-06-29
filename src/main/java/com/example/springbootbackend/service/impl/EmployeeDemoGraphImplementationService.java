@@ -1,6 +1,6 @@
 package com.example.springbootbackend.service.impl;
 
-import com.example.springbootbackend.entity.EmployeeDemograph;
+import com.example.springbootbackend.entity.EmployeeDemography;
 import com.example.springbootbackend.exception.ResourceNotFoundException;
 import com.example.springbootbackend.repository.EmployeeDemoGraphRepository;
 import com.example.springbootbackend.service.EmployeeDemoGraph;
@@ -17,13 +17,13 @@ public class EmployeeDemoGraphImplementationService implements EmployeeDemoGraph
     }
 
     @Override
-    public EmployeeDemograph saveEmployeeDemoGraph(EmployeeDemograph employeeDemograph) {
-        return employeeDemoGraphRepository.save(employeeDemograph);
+    public EmployeeDemography saveEmployeeDemoGraph(EmployeeDemography employeeDemography) {
+        return employeeDemoGraphRepository.save(employeeDemography);
     }
 
     @Override
-    public EmployeeDemograph getEmployeeDemoGraph(long id) {
-        Optional<EmployeeDemograph> empDemo= employeeDemoGraphRepository.findById(id);
+    public EmployeeDemography getEmployeeDemoGraph(long id) {
+        Optional<EmployeeDemography> empDemo= employeeDemoGraphRepository.findById(id);
         return empDemo.orElseThrow(()->new ResourceNotFoundException((id)));
     }
 }

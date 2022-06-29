@@ -1,6 +1,6 @@
 package com.example.springbootbackend.controller;
 
-import com.example.springbootbackend.entity.EmployeeDemograph;
+import com.example.springbootbackend.entity.EmployeeDemography;
 import com.example.springbootbackend.service.impl.EmployeeDemoGraphImplementationService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,13 +18,13 @@ public class EmployeeDemoGraphController {
 
 
     @PostMapping("/demographic")
-    public ResponseEntity<EmployeeDemograph> saveEmployeeDemoGraph(@RequestBody EmployeeDemograph employeeDemograph){
-        return new ResponseEntity<EmployeeDemograph>(employeeDemoGraphImplementation.saveEmployeeDemoGraph(employeeDemograph), HttpStatus.CREATED);
+    public ResponseEntity<EmployeeDemography> saveEmployeeDemoGraph(@RequestBody EmployeeDemography employeeDemography){
+        return new ResponseEntity<EmployeeDemography>(employeeDemoGraphImplementation.saveEmployeeDemoGraph(employeeDemography), HttpStatus.CREATED);
     }
 
     @GetMapping("/demographic/{id}")
-    public ResponseEntity<EmployeeDemograph> getEmployeeDemo(@PathVariable long id){
-        return new ResponseEntity<EmployeeDemograph>(employeeDemoGraphImplementation.getEmployeeDemoGraph(id),HttpStatus.OK);
+    public ResponseEntity<EmployeeDemography> getEmployeeDemo(@PathVariable long id){
+        return new ResponseEntity<EmployeeDemography>(employeeDemoGraphImplementation.getEmployeeDemoGraph(id),HttpStatus.OK);
     }
 
 
